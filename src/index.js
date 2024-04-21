@@ -8,13 +8,14 @@ import {ProSidebarProvider}  from 'react-pro-sidebar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminInterface from './AdminInterface';
 import Login from './Login1';
+import Dashboard from './Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
         <Routes>
-            <Route path="/"element={
+            <Route path="/DemoWeb" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <App />
@@ -22,7 +23,7 @@ root.render(
                 </OpenCvProvider>
             }>
             </Route>
-            <Route path="/admin"element={
+            <Route path="/DemoWeb/admin" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <AdminInterface />
@@ -30,10 +31,18 @@ root.render(
                 </OpenCvProvider>
             }>
             </Route>
-            <Route path="/login" element={
+            <Route path="/DemoWeb/login" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <Login />
+                    </ProSidebarProvider>
+                </OpenCvProvider>
+            }>
+            </Route>
+            <Route path="/DemoWeb/dashboard" element={
+                <OpenCvProvider>
+                    <ProSidebarProvider>
+                        <Dashboard />
                     </ProSidebarProvider>
                 </OpenCvProvider>
             }>

@@ -8,7 +8,8 @@ switch (type){
         return (
                 <div  className='h-text text-light'>
                     <h1>Hello everyone</h1>
-                    <h1>Welcome to my Presentation</h1>
+                    <h1>My name is Tran Ngoc Minh Song</h1>
+                    <h1>Welcome to my project</h1>
                 </div>
 
           )

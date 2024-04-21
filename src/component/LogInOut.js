@@ -9,15 +9,22 @@ import { useState } from 'react';
 const LogInOut = () => {
     const navigate = useNavigate()
     const [sta,setSta] = useState(true)
-    const host = 'http://localhost:8000'
+    const host = "https://songtran91105.pythonanywhere.com"
+    // const host = "https://localhost:8000"
     const handleLoginClick = () => {
-        navigate("/login");
+        navigate("/DemoWeb/login");
       };     
 
      const handleLogoutClick = async () =>{
         sessionStorage.removeItem('token')
         // window.location.href= host + '/logout'
-        window.location.reload()
+        if (window.location.pathname === '/DemoWeb/admin'){
+          navigate("/DemoWeb")
+        }
+        else {
+          window.location.reload()
+        }
+        
      } 
 
     let state = true

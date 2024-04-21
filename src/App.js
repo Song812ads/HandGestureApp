@@ -5,9 +5,9 @@ import '@tensorflow/tfjs-backend-cpu';
 import Header from "./component/Header";
 import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import VideocamIcon from '@mui/icons-material/Videocam';
+import CoPresentIcon from '@mui/icons-material/CoPresent';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import DefaultPage from "./component/DefaultPage";
 import LogInOut from "./component/LogInOut";
@@ -15,7 +15,8 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const { collapseSidebar } = useProSidebar();
-  const host = "http://127.0.0.1:8000"
+  const host = "https://songtran91105.pythonanywhere.com"
+  // const host = "https://localhost:8000"
   const [page,setPage] = useState('home')
   
 let check = true
@@ -33,10 +34,10 @@ useEffect(()=>{
 <div className="App bg-image" 
 style={{
   backgroundSize: "cover",
-  backgroundImage: `url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`}}>
+  backgroundImage: `url("https://images.pexels.com/photos/753267/pexels-photo-753267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`}}>
   <Header />
   <div style={{  height: "calc(100vh - 20px)", display: "flex" }}>
-     <Sidebar > 
+     <Sidebar style={{backgroundImage: `url("https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&w=600")`}} > 
        <Menu>
          <MenuItem
           icon={<MenuOutlinedIcon />}
@@ -47,10 +48,11 @@ style={{
         >
           <h2>Admin</h2>
         </MenuItem>
+
         <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>setPage('home')}>Home</MenuItem>
-        <MenuItem icon={<PeopleOutlinedIcon />} onClick={()=>setPage('present')}>Presentation</MenuItem>
-        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/admin")}>Demo</MenuItem>
-        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/admin")}>Dashboard</MenuItem>
+        <MenuItem icon={<CoPresentIcon />} onClick={()=>setPage('present')}>Presentation</MenuItem>
+        <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/DemoWeb/admin")}>Demo</MenuItem>
+        <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/DemoWeb/dashboard")}>Dashboard</MenuItem>
         {/* <MenuItem icon={<ReceiptOutlinedIcon /> } onClick={handleLoginClick}>LogIn</MenuItem> */}
         <LogInOut />
       </Menu>
