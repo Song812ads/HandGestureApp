@@ -12,14 +12,14 @@ const LogInOut = () => {
     const host = "https://songtran91105.pythonanywhere.com"
     // const host = "https://localhost:8000"
     const handleLoginClick = () => {
-        navigate("/DemoWeb/login");
+        navigate("/login");
       };     
 
      const handleLogoutClick = async () =>{
         sessionStorage.removeItem('token')
         // window.location.href= host + '/logout'
-        if (window.location.pathname === '/DemoWeb/admin'){
-          navigate("/DemoWeb")
+        if (window.location.pathname === '/admin'){
+          navigate("..")
         }
         else {
           window.location.reload()

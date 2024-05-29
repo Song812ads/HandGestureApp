@@ -51,8 +51,8 @@ style={{
 
         <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>setPage('home')}>Home</MenuItem>
         <MenuItem icon={<CoPresentIcon />} onClick={()=>setPage('present')}>Presentation</MenuItem>
-        <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/DemoWeb/admin")}>Demo</MenuItem>
-        <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/DemoWeb/dashboard")}>Dashboard</MenuItem>
+        <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/admin")}>Demo</MenuItem>
+        <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/dashboard")}>Dashboard</MenuItem>
         {/* <MenuItem icon={<ReceiptOutlinedIcon /> } onClick={handleLoginClick}>LogIn</MenuItem> */}
         <LogInOut />
       </Menu>

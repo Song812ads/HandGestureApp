@@ -371,7 +371,7 @@ const AdminInterface = () => {
       }
       }, function() {
         alert("No camera yet. Turn it on")
-        navigate("/DemoWeb")
+        navigate("..")
       });
   },[Webcam])
   
@@ -395,7 +395,7 @@ const AdminInterface = () => {
               if (!response.ok){
                 alert("Not Log In Yet")
                 setSta(false)
-                navigate("/DemoWeb")
+                navigate("..")
               }
               else {
                 response.json().then((data=>{
@@ -428,10 +428,10 @@ style={{
           >
             <h2>Admin</h2>
           </MenuItem>
-          <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('/DemoWeb',{state:'home'})}>Home</MenuItem>
-        <MenuItem icon={<CoPresentIcon />} onClick={()=>navigate('/DemoWeb',{state:'present'})}>Presentation</MenuItem>
-        <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/DemoWeb/admin")}>Demo</MenuItem>
-        <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/DemoWeb/dashboard")}>Dashboard</MenuItem>
+          <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('..',{state:'home'})}>Home</MenuItem>
+        <MenuItem icon={<CoPresentIcon />} onClick={()=>navigate('..',{state:'present'})}>Presentation</MenuItem>
+        <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/admin")}>Demo</MenuItem>
+        <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/dashboard")}>Dashboard</MenuItem>
           <LogInOut />
         </Menu>
       </Sidebar>

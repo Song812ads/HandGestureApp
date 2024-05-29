@@ -57,7 +57,7 @@ let check = true
                           .then((response)=>{
                             if (response.token){
                               alert("Login success")
-                              navigate('/DemoWeb')
+                              navigate('..')
                               sessionStorage.setItem('token',response.token)
                             }
                     
@@ -85,10 +85,10 @@ style={{
         >
           <h2>Admin</h2>
         </MenuItem>
-        <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('/DemoWeb',{state:'home'})}>Home</MenuItem>
-        <MenuItem icon={<PeopleOutlinedIcon />} onClick={()=>navigate('/DemoWeb',{state:'present'})}>Presentation</MenuItem>
-        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/DemoWeb/admin")}>Demo</MenuItem>
-        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/DemoWeb/dashboard")}>Dashboard</MenuItem>
+        <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('..',{state:'home'})}>Home</MenuItem>
+        <MenuItem icon={<PeopleOutlinedIcon />} onClick={()=>navigate('..',{state:'present'})}>Presentation</MenuItem>
+        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/admin")}>Demo</MenuItem>
+        <MenuItem icon={<ContactsOutlinedIcon />} onClick={()=>navigate("/dashboard")}>Dashboard</MenuItem>
         {/* <MenuItem icon={<ReceiptOutlinedIcon /> } onClick={handleLoginClick}>LogIn</MenuItem> */}
         <LogInOut />
       </Menu>

@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
         <Routes>
-            <Route path="/DemoWeb" element={
+            <Route path="/" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <App />
@@ -23,7 +23,7 @@ root.render(
                 </OpenCvProvider>
             }>
             </Route>
-            <Route path="/DemoWeb/admin" element={
+            <Route path="/admin" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <AdminInterface />
@@ -31,7 +31,7 @@ root.render(
                 </OpenCvProvider>
             }>
             </Route>
-            <Route path="/DemoWeb/login" element={
+            <Route path="/login" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <Login />
@@ -39,7 +39,7 @@ root.render(
                 </OpenCvProvider>
             }>
             </Route>
-            <Route path="/DemoWeb/dashboard" element={
+            <Route path="/dashboard" element={
                 <OpenCvProvider>
                     <ProSidebarProvider>
                         <Dashboard />

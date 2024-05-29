@@ -43,7 +43,7 @@ const Dashboard = () => {
         .then((response)=>{
           if (!response.ok){
             alert("Not Log In Yet")
-            navigate("/DemoWeb")
+            navigate("..")
           }
         })
         .catch((e)=>{
@@ -87,10 +87,10 @@ const Dashboard = () => {
                 >
                   <h2>Admin</h2>
                 </MenuItem>
-                <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('/DemoWeb',{state:'home'})}>Home</MenuItem>
-                <MenuItem icon={<CoPresentIcon />} onClick={()=>navigate('/DemoWeb',{state:'present'})}>Presentation</MenuItem>
-                <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/DemoWeb/admin")}>Demo</MenuItem>
-                <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/DemoWeb/dashboard")}>Dashboard</MenuItem>
+                <MenuItem icon={<HomeOutlinedIcon />} onClick={()=>navigate('..',{state:'home'})}>Home</MenuItem>
+                <MenuItem icon={<CoPresentIcon />} onClick={()=>navigate('..',{state:'present'})}>Presentation</MenuItem>
+                <MenuItem icon={<VideocamIcon />} onClick={()=>navigate("/admin")}>Demo</MenuItem>
+                <MenuItem icon={<DashboardIcon />} onClick={()=>navigate("/dashboard")}>Dashboard</MenuItem>
                 {/* <MenuItem icon={<ReceiptOutlinedIcon /> } onClick={handleLoginClick}>LogIn</MenuItem> */}
                 <LogInOut />
               </Menu>
